@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {useNavigate} from "react-router-dom";
 
-const NewPassword = (props) => {
+const NewPassword = () => {
     const ref = useRef(null);
     const navigate = useNavigate();
 
@@ -9,7 +9,7 @@ const NewPassword = (props) => {
         event.preventDefault()
         const form = new FormData()
         form.append('password', event.target[0].value)
-        if (event.target[0].value != event.target[1].value) {
+        if (event.target[0].value !== event.target[1].value) {
             event.target[1].setCustomValidity('The passwords do not match')
 
         } else {

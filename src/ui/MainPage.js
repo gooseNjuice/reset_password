@@ -1,7 +1,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom'
 
-const MainPage = (props) => {
+const MainPage = () => {
     let navigate = useNavigate();
 
     const handleSubmit = async (event) => {
@@ -29,7 +29,8 @@ const MainPage = (props) => {
                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
                 <input type="submit" className="input__submit"/>
             </form>
-            <small><a href="#">Don't have an account?</a></small>
+            <small><a href="https://support.unplugged.com/en/articles/4354-step-2-how-to-subscribe-to-the-up-suite">Don't
+                have an account?</a></small>
         </>
     )
 };

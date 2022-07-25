@@ -10,7 +10,7 @@ const Notification = () => {
             <h2>{title}</h2>
             <p className="small">{text}</p>
         </form>
-        {message && (<small>Did not receive the email? Check your spam folder, or <a href="#">try another email
+        {message && (<small>Did not receive the email? Check your spam folder, or <a href="/">try another email
             address</a></small>)}
     </>)
 };
