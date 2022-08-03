@@ -10,7 +10,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<MainPage/>}/>
                 <Route path="notification" element={<Notification/>}/>
-                <Route path="password" element={<NewPassword/>}/>
+                <Route path="password/:hash" element={<NewPassword/>}/>
             </Routes>
         </BrowserRouter>
     )
