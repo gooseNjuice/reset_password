@@ -1,9 +1,11 @@
 import React, {useRef} from 'react';
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 
 const NewPassword = () => {
     const ref = useRef(null);
     const navigate = useNavigate();
+    let {hash} = useParams();
+
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -14,18 +16,22 @@ const NewPassword = () => {
 
         } else {
 
-            // await fetch('/', {
-            //     body: document.getElementById('password1').value,
-            //     method: 'post'
-            // })
-            navigate('/notification', {
-                state: {
-                    icon: 'icon--confirmation',
-                    title: 'Thank you',
-                    text: 'Your password was updated successfully.',
-                    message: false
-                }
-            });
+            await fetch('https://up-app.unpluggedsystems.app/accounts/v1/reset/password', {
+                body: {token: hash, password: document.getElementById('password1').value},
+                method: 'post'
+            }).then(res => {
+                if (res.statusCode == 200)
+                    navigate('/notification', {
+                        state: {
+                            icon: 'icon--confirmation',
+                            title: 'Thank you',
+                            text: 'Your password was updated successfully.',
+                            message: false
+                        }
+                    });
+            })
+                .catch(e => console.log(e))
+
         }
     }
     return (

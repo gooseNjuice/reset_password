@@ -3,6 +3,7 @@
 /***** common tags *****/
 
 html {
+    background-color: black;
     color: #ccc;
     font-size: 1em;
     line-height: 1.4;
@@ -11,7 +12,6 @@ html {
 
 body {
     min-height: 100vh;
-    background-image: url("./assets/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -47,7 +47,7 @@ li {
 /***** classes *****/
 
 .main__form {
-    color: white;
+    color: #ffffff;
     margin: 5rem auto;
     max-width: 25%;
     display: flex;
@@ -57,10 +57,9 @@ li {
     border-radius: 8px;
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .33);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .33);
-    background: rgba(0, 0, 0, 0) linear-gradient(155deg, rgba(50, 57, 65, 0.5) 0%, rgba(22, 23, 27, 0.5) 100%) repeat scroll 0 0;
+    background-color: #0c1517;
     padding: 2rem;
 }
-
 
 .input__text {
     color: #fff;
@@ -68,7 +67,7 @@ li {
     font-family: inherit;
     font-weight: 300;
     font-size: 1rem;
-    border-radius: 40px;
+    border-radius: 8px;
     padding: 8px 16px;
     -webkit-box-flex: 1;
     -ms-flex: 1;

@@ -14,7 +14,7 @@ const MainPage = () => {
             state: {
                 icon: 'icon--mail',
                 title: 'Check your mail',
-                text: 'We\'ve sent a password recover instructions to your email.',
+                text: 'We\'ve sent a password recover instructions to your email. If this email is associated with an Unplugged account, check it.',
                 message: true
             }
         });
