@@ -20,7 +20,7 @@ const NewPassword = () => {
                 body: {token: hash, password: document.getElementById('password1').value},
                 method: 'post'
             }).then(res => {
-                if (res.statusCode == 200)
+                if (res.statusCode === 200)
                     navigate('/notification', {
                         state: {
                             icon: 'icon--confirmation',
